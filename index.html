@@ -112,41 +112,7 @@ body{
 .sec-lead{margin:var(--s2) 0 0; text-align:center; font-size:var(--t-sm); font-weight:500; color:var(--n-500); line-height:1.9}
 .sec-note{margin:var(--s3) 0 0; text-align:center; font-size:var(--t-sm); font-weight:700; color:var(--tiff-deep); line-height:1.9}
 
-/* ══ STEP 01 動画 ══ */
-.frame{
-  display:block; width:100%; aspect-ratio:16/9; margin-top:var(--s3);
-  background:var(--n-950); border-radius:var(--r); overflow:hidden;
-  box-shadow:0 2px 10px rgba(0,0,0,.05), 0 8px 24px rgba(0,0,0,.16);
-}
-.frame iframe{width:100%; height:100%; border:0; display:block}
-.plate{
-  width:100%; height:100%; display:flex; flex-direction:column;
-  align-items:center; justify-content:center; gap:6px;
-  color:var(--n-0); text-align:center; padding:12px;
-  font-size:clamp(13px,3.6vw,16px); font-weight:700; line-height:1.7;
-}
-.plate .ln{display:block}   /* 2文を必ず2行に分ける（1行連結の防止）*/
-.plate .mk{
-  width:38px; height:38px; border-radius:50%; margin-bottom:2px;
-  border:2px solid var(--tiff); color:var(--tiff);
-  display:flex; align-items:center; justify-content:center; font-size:15px;
-}
-
-/* ── 動画直下の小さめCTAアンカー ── */
-.jump{
-  display:flex; align-items:center; justify-content:center; gap:8px;
-  width:fit-content; max-width:100%; margin:var(--s3) auto 0;
-  min-height:44px;                      /* タップ領域 44px 以上を保証 */
-  padding:11px 18px; border-radius:999px;
-  background:var(--n-0); border:2px solid var(--tiff);
-  color:var(--tiff-deep); text-decoration:none;
-  font-size:var(--t-sm); font-weight:800; line-height:1.6;
-  box-shadow:0 2px 10px rgba(0,0,0,.05);
-}
-.jump .ar{font-size:12px}
-.jump:active{transform:translateY(2px)}
-
-/* ══ STEP 02 プレゼントカード（反復）══ */
+/* ══ STEP 01 プレゼントカード（反復）══ */
 .gifts{list-style:none; margin:var(--s3) 0 0; padding:0}
 .gifts li{margin:0 0 10px}
 .gifts li:last-child{margin-bottom:0}
@@ -168,7 +134,7 @@ body{
 /* .g-a = シェブロン用。カードを実リンク(<a>)に差し替えたときだけ使う */
 .g-a{flex:0 0 auto; font-size:22px; font-weight:800; color:var(--gold-d)}
 
-/* ══ STEP 03 CTA ══ */
+/* ══ STEP 02 CTA ══ */
 .cta{padding:var(--s5) 0 0; text-align:center}
 .cta-h{margin:var(--s1) 0 var(--s3); font-size:var(--t-h2); font-weight:800; line-height:1.45}
 /* スパークルの居場所 ＋ パルス拡大分(scale 1.07)の逃げ代を上下に確保する */
@@ -251,7 +217,6 @@ body{
   .btn .mark{width:40px; height:40px; border-radius:10px}
   .g{gap:10px; padding:12px 11px}
   .g .n{width:38px; height:38px; font-size:15px}
-  .jump{padding:11px 14px; min-height:44px}   /* 340px以下でもタップ高さ44pxを維持 */
 }
 </style>
 </head>
@@ -287,28 +252,11 @@ body{
 
 <div class="wrap">
 
-  <!-- ══ STEP 01 動画 ══ -->
+  <!-- ══ STEP 01 プレゼント ══ -->
   <section class="sec" id="step01">
-    <span class="sec-k"><span class="nb">STEP 01</span></span>
-    <h2 class="sec-h"><span class="nb">まずは動画を</span><wbr><span class="nb">ご覧ください</span></h2>
-    <div class="frame" id="frameIn">
-      <div class="plate" id="plate">
-        <span class="mk" aria-hidden="true">▶</span>
-        <span class="ln"><span class="nb">動画は準備中です。</span></span>
-        <span class="ln"><span class="nb">公開までお待ちください</span></span>
-      </div>
-    </div>
-    <a class="jump" href="#cta">
-      <span class="nb">無料プレゼントを受け取る</span>
-      <span class="ar" aria-hidden="true">▼</span>
-    </a>
-  </section>
-
-  <!-- ══ STEP 02 プレゼント ══ -->
-  <section class="sec" id="step02">
-    <span class="sec-k is-gold"><span class="nb">STEP 02</span></span>
+    <span class="sec-k is-gold"><span class="nb">STEP 01</span></span>
     <h2 class="sec-h"><span class="nb">記念プレゼントの</span><wbr><span class="nb">ご案内</span></h2>
-    <p class="sec-lead"><span class="nb">動画とあわせて使える</span><wbr><span class="nb">3つのプレゼントを</span><wbr><span class="nb">無料でお渡しします。</span></p>
+    <p class="sec-lead"><span class="nb">3つのプレゼントを</span><wbr><span class="nb">無料でお渡しします。</span></p>
     <ul class="gifts">
       <!-- KARI プレゼント01（公開前に実データへ差し替え） -->
       <li><div class="g">
@@ -332,9 +280,9 @@ body{
     <p class="sec-note"><span class="nb">プレゼントの受け取りは</span><wbr><span class="nb">公式LINEから行えます。</span></p>
   </section>
 
-  <!-- ══ STEP 03 LINE CTA ══ -->
+  <!-- ══ STEP 02 LINE CTA ══ -->
   <section class="cta" id="cta">
-    <span class="sec-k"><span class="nb">STEP 03</span></span>
+    <span class="sec-k"><span class="nb">STEP 02</span></span>
     <h2 class="cta-h"><span class="nb">公式LINEで</span><wbr><span class="nb">プレゼントを受け取る</span></h2>
     <div class="cta-fx">
       <span class="spk is-gold c1" aria-hidden="true">✦</span>
@@ -365,24 +313,10 @@ body{
 <script>
 // ===== ここだけ書き換えれば運用できる =====
 const CONFIG = {
-  VIDEO_URL: "https://utage-system.com/video/1hMaPGzluERa",   // UTAGE動画URL。空=準備中プレート
   LINE_URL:  "https://lin.ee/zNCjDLD",   // 公式LINE登録URL。空=非活性ボタン+注記
 };
 
 (function(){
-  var frameIn = document.getElementById('frameIn');
-
-  function mountVideo(){
-    if (!CONFIG.VIDEO_URL) return;
-    frameIn.innerHTML = '';
-    var f = document.createElement('iframe');
-    f.src = CONFIG.VIDEO_URL;
-    f.setAttribute('allow','autoplay; fullscreen; picture-in-picture');
-    f.setAttribute('allowfullscreen','');
-    f.setAttribute('title','お客様インタビュー動画');
-    frameIn.appendChild(f);
-  }
-
   function activateCta(){
     if (!CONFIG.LINE_URL) return;
     var btns = document.querySelectorAll('button.btn');
@@ -398,7 +332,6 @@ const CONFIG = {
     Array.prototype.forEach.call(todos, function(t){ t.style.display = 'none'; });
   }
 
-  mountVideo();
   activateCta();
 })();
 </script>
