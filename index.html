@@ -61,13 +61,6 @@ body{
   line-height:1.32; letter-spacing:.01em; color:var(--n-0);
   text-shadow:0 2px 10px rgba(0,0,0,.22);
 }
-/* 「完全解説」の強調: サムネの金文字と同じ質感のグラデ文字 */
-.d .em{
-  display:inline-block; font-size:1.16em; text-shadow:none;
-  color:#f6dc9a; /* clip-text非対応環境のフォールバック */
-  background:linear-gradient(180deg,#fff3cf 0%,#f6dc9a 30%,#e6b954 55%,#c99a34 80%,#8a6a1f 100%);
-  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
-}
 
 /* ══ スパークル ✦（共通）══ */
 .spk{
@@ -231,7 +224,7 @@ body{
   <span class="spk is-gold h4s" aria-hidden="true">✦</span>
 
   <h1 class="ttl">
-    <span class="d"><span class="nb">アクセサリー物販</span><wbr><span class="nb em">完全解説</span></span>
+    <span class="d"><span class="nb">アクセサリー物販</span><wbr><span class="nb">完全解説</span></span>
   </h1>
 </header>
 
